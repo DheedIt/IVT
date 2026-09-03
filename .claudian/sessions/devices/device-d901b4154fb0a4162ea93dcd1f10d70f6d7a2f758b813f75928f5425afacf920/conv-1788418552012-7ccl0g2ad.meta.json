@@ -1,0 +1,11 @@
+{
+  "id": "conv-1788418552012-7ccl0g2ad",
+  "providerId": "claude",
+  "title": "Приведи в нормальный вид формулы",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1788418552040,
+  "lastActivityAt": 1788418552040,
+  "sessionId": null,
+  "selectedModel": "opus",
+  "linkedContentPath": "Основы математического анализа/Практика/Метод математической индукции.md"
+}
