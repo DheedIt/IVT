@@ -78,16 +78,6 @@
               "icon": "lucide-bookmark",
               "title": "Закладки"
             }
-          },
-          {
-            "id": "1b2516401939a4ae",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {},
-              "icon": "clock",
-              "title": "Recent files"
-            }
           }
         ]
       }
