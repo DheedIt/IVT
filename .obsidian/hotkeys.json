@@ -1,0 +1,10 @@
+{
+  "editing-toolbar:editor:insert-mathblock": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
+    }
+  ]
+}
