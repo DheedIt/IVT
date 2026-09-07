@@ -1,0 +1,11 @@
+{
+  "id": "conv-1788723484444-hvwb6qtya",
+  "providerId": "claude",
+  "title": "hello",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1788723484462,
+  "lastActivityAt": 1788723484462,
+  "sessionId": null,
+  "selectedModel": "opus",
+  "linkedContentPath": "Общая информация.md"
+}
