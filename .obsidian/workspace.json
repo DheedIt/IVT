@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7d607b534653407e",
+            "id": "5e77208a53b94722",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -213,6 +213,9 @@
               "icon": "lucide-list",
               "title": "Структура"
             }
+          }
+        ],
+        "currentTab": 4
           },
           {
             "id": "1f82ae8f5cae447b",
@@ -251,11 +254,10 @@
       "daily-notes:Сегодняшняя заметка": false,
       "templates:Вставить шаблон": false,
       "command-palette:Открыть палитру команд": false,
-      "bases:Создать новую базу": false,
-      "realclaudian:Open Claudian": false
+      "bases:Создать новую базу": false
     }
   },
-  "active": "7d607b534653407e",
+  "active": "5e77208a53b94722",
   "lastOpenFiles": [
 <<<<<<< Updated upstream
 =======
