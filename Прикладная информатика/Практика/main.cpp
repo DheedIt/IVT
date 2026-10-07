@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
+#include <vector>
 using namespace std;
 int main()
 {
@@ -146,28 +148,75 @@ int main()
     // cout << endl;
     // cout << fingers[input-1];
 
-    int n = 0;
-    cin >> n;
-    int fSum = 0;
-    int sSum = 0;
-    int maxSum = 0;
-    for (int i = 0; i < n; ++i)
-    {
-        int num = i + 1;
+    // int n = 0;
+    // cin >> n;
+    // int fSum = 0;
+    // int sSum = 0;
+    // int maxSum = 0;
+    // for (int i = 0; i < n; ++i)
+    // {
+    //     int num = i + 1;
 
-        while (num >= 1)
-        {
-            // cout << num % 10;
-            i % 2 == 0 ? fSum += num % 10 : sSum += num % 10;
-            num /= 10;
-        }
-        if (i % 2 == 0)
-        {
-            maxSum < fSum + sSum ? maxSum = fSum + sSum : maxSum == maxSum;
-            cout << fSum << " n " << sSum << " - " << i+1 << endl;
-            fSum = 0;
-            sSum = 0;
-        }
+    //     while (num >= 1)
+    //     {
+    //         // cout << num % 10;
+    //         i % 2 == 0 ? fSum += num % 10 : sSum += num % 10;
+    //         num /= 10;
+    //     }
+    //     if (i % 2 == 0)
+    //     {
+    //         maxSum < fSum + sSum ? maxSum = fSum + sSum : maxSum == maxSum;
+    //         cout << fSum << " n " << sSum << " - " << i+1 << endl;
+    //         fSum = 0;
+    //         sSum = 0;
+    //     }
+    // }
+    // cout << maxSum << endl;
+
+    // int num = 0;
+    // int sum = 0;
+    // cout << "Введите число: ";
+    // cin >> num;
+    // cout << endl;
+    // int i = num;
+    // while (num >= 1)
+    // {
+    //     sum += num % 10;
+    //     num /= 10;
+    //     cout << num << endl;
+    // }
+    // cout << sum << endl;
+    int num = 0;
+    int counter = 0;
+    int result = 0;
+    cout << "Введите число: ";
+    cin >> num;
+    cout << endl;
+    int lenght = 0;
+    int subnum = num;
+    vector<int> nums;
+    while (subnum >= 1)
+    {
+        cout << "Pushed in vector: " << subnum % 10 << endl;
+        nums.push_back(subnum % 10);
+        subnum /= 10;
     }
-    cout << maxSum << endl;
+    lenght = nums.size();
+    cout << "-----" << endl;
+    for (int i = 0; i < lenght - 1; ++i)
+    {
+        for (int j = 0 + i; j < lenght - 1; ++j)
+        {
+            cout << nums[j] << "+1" << " == " << nums[j + 1] << endl;
+            if (nums[j] + 1 == nums[j + 1])
+            {
+                counter += 1;
+            }
+            num = nums[j];
+        }
+        if (counter > result)
+        result = counter;
+        counter = 0;
+    }
+    cout << result << endl;
 }
