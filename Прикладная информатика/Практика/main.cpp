@@ -1,8 +1,22 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <sstream>
 #include <vector>
 using namespace std;
+int getNumFromVector(const vector<int> &vec)
+{
+    string numString;
+    for (int i = 0; i < vec.size() - 1; ++i)
+    {
+        numString += vec[i];
+    }
+    stringstream ss(numString);
+    int num = 0;
+    ss >> num;
+    return num;
+}
+
 int main()
 {
     // 1 верста = 1066.8 метров
@@ -189,34 +203,49 @@ int main()
     int num = 0;
     int counter = 0;
     int result = 0;
-    cout << "Введите число: ";
-    cin >> num;
-    cout << endl;
-    int lenght = 0;
-    int subnum = num;
-    vector<int> nums;
-    while (subnum >= 1)
+    cout << "Введите числа: ";
+    vector<vector<int>> nums;
+    string numbers;
+    cin >> numbers;
+    while (numbers.size() != 0)
     {
-        cout << "Pushed in vector: " << subnum % 10 << endl;
-        nums.push_back(subnum % 10);
-        subnum /= 10;
+        int i = 0;
+        int j = 0;
+        if (numbers[i] == ' ')
+            continue;
+        nums[j][i] = numbers[i];
+        ++j;
+        ++i;
     }
-    lenght = nums.size();
-    cout << "-----" << endl;
-    for (int i = 0; i < lenght - 1; ++i)
-    {
-        for (int j = 0 + i; j < lenght - 1; ++j)
-        {
-            cout << nums[j] << "+1" << " == " << nums[j + 1] << endl;
-            if (nums[j] + 1 == nums[j + 1])
-            {
-                counter += 1;
+    reverse(nums.begin(), nums.end());
+    for_each(nums.cbegin(), nums.cend(), [&counter](const vector<int> &nums, int previousNum = 0)
+             { 
+                int currentNum = getNumFromVector(nums);  
+                if(currentNum == previousNum+1){
+                    ++counter;
+                    previousNum = currentNum;        
+                } 
             }
-            num = nums[j];
-        }
-        if (counter > result)
-        result = counter;
-        counter = 0;
-    }
-    cout << result << endl;
+        );
+
+    // for (int i = 0; i <)
+    // reverse(nums.begin(), nums.end());
+    // cout
+    // << "-----" << endl;
+    // for (int i = 0; i < lenght - 1; ++i)
+    // {
+    //     for (int j = i; j < lenght - 1; ++j)
+    //     {
+    //         cout << nums[j] << "+1" << " == " << nums[j + 1] << endl;
+    //         if (nums[j] + 1 == nums[j + 1])
+    //         {
+    //             counter += 1;
+    //         }
+    //         num = nums[j];
+    //     }
+    //     if (counter > result)
+    //         result = counter;
+    //     counter = 0;
+    // }
+    // cout << result << endl;
 }
