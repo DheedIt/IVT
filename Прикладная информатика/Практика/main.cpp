@@ -200,33 +200,32 @@ int main()
     //     cout << num << endl;
     // }
     // cout << sum << endl;
-    int num = 0;
-    int counter = 0;
-    int result = 0;
-    cout << "Введите числа: ";
-    vector<vector<int>> nums;
-    string numbers;
-    cin >> numbers;
-    while (numbers.size() != 0)
-    {
-        int i = 0;
-        int j = 0;
-        if (numbers[i] == ' ')
-            continue;
-        nums[j][i] = numbers[i];
-        ++j;
-        ++i;
-    }
-    reverse(nums.begin(), nums.end());
-    for_each(nums.cbegin(), nums.cend(), [&counter](const vector<int> &nums, int previousNum = 0)
-             { 
-                int currentNum = getNumFromVector(nums);  
-                if(currentNum == previousNum+1){
-                    ++counter;
-                    previousNum = currentNum;        
-                } 
-            }
-        );
+
+    // cout << "Введите числа через пробел: ";
+    // string input;
+    // getline(cin, input);
+
+    // vector<int> nums;
+    // stringstream ss(input);
+    // int number;
+
+    // while (ss >> number) {
+    //     nums.push_back(number);
+    // }
+
+    // // reverse(nums.begin(), nums.end());
+
+    // int counter = 0;
+    
+  
+    // for (int i = 1; i < nums.size(); ++i) {
+    //     if (nums[i] == nums[i - 1] + 1) {
+    //         ++counter;
+    //     }
+    // }
+
+    // cout << "Результат: " << counter << endl;
+
 
     // for (int i = 0; i <)
     // reverse(nums.begin(), nums.end());
